@@ -300,6 +300,18 @@
 	<script src="love.min.js" ></script>
 	<div class="mPower"><span id="on" title="点击暂停" style=""></span><span id="off" title="点击播放"  style=""></span></div>
 
+<script>
+	var audioPlayed = false;
+
+	document.addEventListener("keydown", function(event) {
+		if (!audioPlayed && event.key === "ArrowDown") {
+			var audio = document.getElementById("bgmMusic");
+			audio.play();
+			audioPlayed = true;
+		}
+	});
+
+</script>
 
 </body>
 </html>
